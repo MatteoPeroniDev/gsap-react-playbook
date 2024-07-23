@@ -1,0 +1,15 @@
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+.title {
+  font-size: 100px;
+  font-weight: bold;
+  text-align: center;
+  transform: translateY(100%);
+  transition: transform 0.5s;
+}
+.title-container {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
