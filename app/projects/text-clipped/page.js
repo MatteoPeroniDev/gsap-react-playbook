@@ -1,8 +1,8 @@
 "use client";
 import React, { useRef } from 'react'
-import './page.css';
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
+import './page.css';
 
 function Page() {
   const container = useRef(null);
