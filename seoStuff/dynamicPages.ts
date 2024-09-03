@@ -9,7 +9,7 @@ export async function dynamicProjects(): Promise<MetadataRoute.Sitemap[]> {
 
     return [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL}/${slugPart}`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL}/projects/${slugPart}`,
         lastModified: new Date(),
         changeFrequency: "monthly",
         priority: 0.8,
