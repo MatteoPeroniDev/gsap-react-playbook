@@ -3,11 +3,11 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TextPlugin } from "gsap/TextPlugin";
-import "./page.css";
+import "./index.css";
 
 gsap.registerPlugin(TextPlugin);
 
-function Page() {
+function TypeWriteText() {
   const container = useRef(null);
 
   useGSAP(
@@ -29,4 +29,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default TypeWriteText;

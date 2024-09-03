@@ -1,0 +1,29 @@
+.project-card {
+  position: relative;
+  aspect-ratio: 1 / 1;
+  border-radius: 16px;
+  overflow: hidden;
+  max-height: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+.project-title-wrapper {
+  position: absolute;
+  bottom: 0rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  background-color: black;
+  z-index: 1;
+}
+.project-title {
+  text-align: center;
+  padding: 1rem;
+  color: white;
+  text-transform: uppercase;
+}
+.project-image {
+  z-index: -1;
+}

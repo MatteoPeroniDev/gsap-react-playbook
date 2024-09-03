@@ -3,12 +3,12 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 /* import { SplitText } from "gsap-trial/SplitText"; */
-import "./page.css";
+import "./index.css";
 import SplitType from "split-type";
 
 /* gsap.registerPlugin(SplitText); */
 
-function Page() {
+function SplitText() {
   const container = useRef(null);
 
   useGSAP(
@@ -56,4 +56,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default SplitText;

@@ -2,9 +2,9 @@
 import React, { useRef } from 'react'
 import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
-import './page.css';
+import './index.css';
 
-function Page() {
+function ClipText() {
   const container = useRef(null);
 
   useGSAP(() => {
@@ -26,4 +26,4 @@ function Page() {
   )
 }
 
-export default Page
+export default ClipText

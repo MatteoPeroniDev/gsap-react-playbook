@@ -2,11 +2,11 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import "./page.css";
+import "./index.css";
 import Image from "next/image";
 import LandscapeImg from "@/assets/images/landscape.jpg";
 
-function Page() {
+function ImageRevealHorizontally2() {
   const container = useRef(null);
   const imageRef = useRef(null);
 
@@ -42,4 +42,4 @@ function Page() {
   );
 }
 
-export default Page;
+export default ImageRevealHorizontally2;

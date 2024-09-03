@@ -1,8 +1,13 @@
 import { type SchemaTypeDefinition } from "sanity";
-import { projectType } from "./schemas/documents/projectType";
-import { authorType } from "./schemas/documents/authorType";
-import { customImage } from "./schemas/types/customImageType";
+import { project } from "./schemas/documents/project";
+import { author } from "./schemas/documents/author";
+import { customImage } from "./schemas/objects/customImage";
+import { seo } from "./schemas/objects/seo";
+
+const documentsSchema: SchemaTypeDefinition[] = [project, author];
+const modulesSchema: SchemaTypeDefinition[] = [];
+const objectsSchema: SchemaTypeDefinition[] = [seo, customImage];
 
 export const schema: { types: SchemaTypeDefinition[] } = {
-  types: [projectType, authorType, customImage],
+  types: [...documentsSchema, ...modulesSchema, ...objectsSchema],
 };
