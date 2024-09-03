@@ -1,0 +1,13 @@
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+}
+#text {
+  max-width: 500px;
+  font-size: 70px;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+  visibility: hidden;
+}

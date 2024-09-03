@@ -1,0 +1,12 @@
+section {
+  display: grid;
+  place-items: center;
+  height: 100vh;
+  background-color: black;
+  position: relative;
+  overflow: hidden;
+}
+img {
+  opacity: 0;
+  clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+}
