@@ -7,6 +7,7 @@ import TypeWriteText from '@/projects/TypeWriteText';
 import { notFound } from 'next/navigation';
 import GitHubLink from '@/components/GitHubLink';
 import { generatePageMetadataFromSeoObj } from '@/seoStuff/seoUtils';
+import GoToHome from '@/components/GoToHome';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const project = await getSingleProject(params.slug);
@@ -39,6 +40,7 @@ const Page = async ({ params }: { params: { slug: string } }) => {
       {githubLink && (
         <GitHubLink link={githubLink} />
       )}
+      <GoToHome />
     </main>
   )
 }

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import React from 'react'
+import GitHubIcon from "@/assets/svg/github.svg"
 import './GitHubLink.css'
 
 interface Props {
@@ -8,7 +9,8 @@ interface Props {
 function GitHubLink({ link }: Props) {
   return (
     <Link href={link || "/"} target='_blank' className='gh-link'>
-      Link to GitHub
+      <GitHubIcon className="gh-icon" />
+      <span className='gh-label'>Link to Code</span>
     </Link>
   )
 }
