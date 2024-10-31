@@ -4,10 +4,8 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import SplitType from "split-type";
 import styles from "./index.module.css";
-/* import { SplitText } from "gsap-trial/SplitText"; */
-/* gsap.registerPlugin(SplitText); */
 
-function SplitText() {
+function LeftToRightFadeText() {
   const container = useRef(null);
 
   useGSAP(
@@ -19,42 +17,24 @@ function SplitText() {
       gsap.fromTo(
         `.${styles.title} .char`,
         {
-          y: 100,
+          autoAlpha: 0,
         },
         {
-          y: 0,
+          autoAlpha: 1,
           stagger: 0.1,
           delay: 0.2,
-          duration: 0.3,
+          duration: 2,
         }
       );
-
-      /* const textSplitted = new SplitText("#title", {
-        type: "chars",
-      });
-      let chars = textSplitted.chars;
-      gsap.fromTo(
-        chars,
-        {
-          y: 100,
-          visibility: "visible", // This is necessary to prevent flickering
-        },
-        {
-          y: 0,
-          stagger: 0.1,
-          delay: 0.2,
-          duration: 0.3,
-        }
-      ); */
     },
     { scope: container }
   );
 
   return (
     <section className={styles.container} ref={container}>
-      <h1 className={styles.title}>Hello!</h1>
+      <h1 className={styles.title}>Urca che top!</h1>
     </section>
   );
 }
 
-export default SplitText;
+export default LeftToRightFadeText;

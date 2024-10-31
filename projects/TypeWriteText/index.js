@@ -3,7 +3,7 @@ import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { TextPlugin } from "gsap/TextPlugin";
-import "./index.css";
+import styles from "./index.module.css";
 
 gsap.registerPlugin(TextPlugin);
 
@@ -12,8 +12,10 @@ function TypeWriteText() {
 
   useGSAP(
     () => {
-      gsap.to("#text", {
-        visibility: "visible",
+      // This is necessary to prevent flickering
+      gsap.set(`.${styles.text}`, { visibility: "visible" });
+
+      gsap.to(`.${styles.text}`, {
         text: { value: "this is wonderful<br/>🤩" },
         duration: 2,
         ease: "none",
@@ -23,8 +25,8 @@ function TypeWriteText() {
   );
 
   return (
-    <section ref={container}>
-      <p id="text"></p>
+    <section className={styles.container} ref={container}>
+      <p className={styles.text}></p>
     </section>
   );
 }

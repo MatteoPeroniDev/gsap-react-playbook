@@ -1,0 +1,11 @@
+.container {
+  display: grid;
+  place-items: center;
+  height: 100svh;
+}
+.title {
+  font-size: 100px;
+  font-weight: bold;
+  overflow: hidden;
+  visibility: hidden;
+}

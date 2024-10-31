@@ -1,29 +1,30 @@
 "use client";
-import React, { useRef } from 'react'
-import gsap from 'gsap';
-import { useGSAP } from '@gsap/react';
-import './index.css';
+import React, { useRef } from "react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
+import styles from "./index.module.css";
 
 function ClipText() {
   const container = useRef(null);
 
-  useGSAP(() => {
-    gsap.to('.title', {
-      y: 0,
-      duration: .1,
-      delay: .2,
-    });
-  }, { scope: container });
+  useGSAP(
+    () => {
+      gsap.to(`.${styles.title}`, {
+        y: 0,
+        duration: 0.1,
+        delay: 0.2,
+      });
+    },
+    { scope: container }
+  );
 
   return (
-    <section ref={container}>
-      <div className="title-container">
-        <h1 className="title">
-          Hello!
-        </h1>
+    <section className={styles.container} ref={container}>
+      <div className={styles.titleWrapper}>
+        <h1 className={styles.title}>Hello!</h1>
       </div>
     </section>
-  )
+  );
 }
 
-export default ClipText
+export default ClipText;

@@ -8,6 +8,7 @@ import { notFound } from 'next/navigation';
 import GitHubLink from '@/components/GitHubLink';
 import { generatePageMetadataFromSeoObj } from '@/seoStuff/seoUtils';
 import GoToHome from '@/components/GoToHome';
+import LeftToRightFadeText from '@/projects/LeftToRightFadeText';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const project = await getSingleProject(params.slug);
@@ -36,6 +37,9 @@ const Page = async ({ params }: { params: { slug: string } }) => {
       )}
       {slug === "typewrite-text" && (
         <TypeWriteText />
+      )}
+      {slug === "left-to-right-fade-text" && (
+        <LeftToRightFadeText />
       )}
       {githubLink && (
         <GitHubLink link={githubLink} />

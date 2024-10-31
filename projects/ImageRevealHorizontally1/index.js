@@ -2,9 +2,9 @@
 import React, { useRef } from "react";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import "./index.css";
 import Image from "next/image";
 import LandscapeImg from "@/assets/images/landscape.jpg";
+import styles from "./index.module.css";
 
 function ImageRevealHorizontally1() {
   const container = useRef(null);
@@ -27,10 +27,11 @@ function ImageRevealHorizontally1() {
   );
 
   return (
-    <section ref={container}>
+    <section className={styles.container} ref={container}>
       <Image
         ref={imageRef}
         src={LandscapeImg}
+        className={styles.image}
         alt="A beautiful landscape"
         quality={100}
         fill

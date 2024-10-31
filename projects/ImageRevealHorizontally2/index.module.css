@@ -1,11 +1,12 @@
-section {
+.container {
   display: grid;
   place-items: center;
-  height: 100vh;
+  height: 100svh;
   background-color: black;
   position: relative;
   overflow: hidden;
 }
-img {
+.image {
+  opacity: 0;
   clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
 }
